@@ -1,0 +1,106 @@
+/* colors */
+$haBlue: #049cdb;
+$lightGray: #f1f1f1;
+$medGray: #e9e9e9;
+$shadowGray: #888888;
+
+/* bootstrap variables */
+$navbarHeight: 70px;
+$navbarLinkColor: $medGray;
+
+@import 'bootstrap';
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 10px;
+  background-color: $lightGray;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* header */
+.nav-bar {
+	position: fixed !important;
+	box-shadow: 0px 1px 3px $shadowGray;
+}
+
+.navbar-inner {
+  background-color: $blue;
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+.navbar-search {
+	position: relative;
+}
+
+.navbar-search .search-query {
+	padding-left: 29px !important;
+}
+
+.navbar-search .icon-search {
+	position: absolute;
+	top: 7px;
+	left: 11px;
+	background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings.png");
+}
+
+.navbar .brand {
+	text-shadow: none;
+	font-style: bold;
+	//color: $navbarLinkColor;
+}
+
+.navbar .nav > li > a {
+	text-shadow: none;
+	//color: $lightGray;
+	&:hover {
+		color: white;
+	}
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayDark;
+  color: $grayDark;
+  a {
+    color: $blue;
+    &:hover { 
+      color: $grayDark;
+    }
+  }  
+  small { 
+    float: left; 
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}

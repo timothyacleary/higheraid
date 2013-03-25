@@ -1,4 +1,20 @@
 Higheraid::Application.routes.draw do
+
+  devise_for :users
+
+  match 'about', to: 'static_pages#about'
+  match 'tos', to: 'static_pages#tos'
+
+  # Facebook omniauth routes
+  # match 'auth/:provider/callback', to: 'sessions#create'
+  # match 'auth/failure', to: redirect('/')
+  # match 'signout', to: 'sessions#destroy', as: 'signout'
+
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  root to: 'static_pages#home'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -45,10 +61,6 @@ Higheraid::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
