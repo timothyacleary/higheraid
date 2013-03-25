@@ -1,6 +1,14 @@
 Higheraid::Application.routes.draw do
 
-  devise_for :users
+  get "user/new"
+
+  get "user/edit"
+
+  get "user/create"
+
+  get "user/destroy"
+
+  devise_for :users, controllers: { registrations: "registrations" }
 
   match 'about', to: 'static_pages#about'
   match 'tos', to: 'static_pages#tos'

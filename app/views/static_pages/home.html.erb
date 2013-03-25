@@ -1,1 +1,19 @@
-<h1>Higher Aid</h1>
+<div class='container content'>
+<% if user_signed_in? %>
+<h2>Welcome, <%= @user.name %>!</h2> 
+<% else %>
+	<div class='hero-unit'>
+	<div class='row'>	
+		<div class='pull-left'>
+			<h1>Applying to college?</h1>
+			<h2>Let's make it easy.</h2>
+			<br />
+			<p>Higher Aid simplifies the college application process. For everyone.</p>
+		</div>
+		<div class='pull-right'>
+			<%= render 'home_sign_up' %>
+		</div>
+	</div>
+	</div>
+<% end %>
+</div>

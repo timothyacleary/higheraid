@@ -10,6 +10,12 @@ $navbarLinkColor: $medGray;
 
 @import 'bootstrap';
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
 /* universal */
 
 html {
@@ -37,10 +43,18 @@ textarea {
   margin-bottom: 10px;
 }
 
+.right {
+  float: right;
+}
+
+.left { 
+  float:left;
+}
+
 /* header */
 .nav-bar {
 	position: fixed !important;
-	box-shadow: 0px 1px 3px $shadowGray;
+	box-shadow: 1px 3px 8px $shadowGray;
 }
 
 .navbar-inner {
@@ -103,4 +117,19 @@ footer {
       margin-left: 10px;
     }
   }
+}
+
+/* content */
+.hero-unit {
+  background-color: $white;
+  box-shadow: 1px 3px 8px $shadowGray;
+}
+
+/* miscellaneous */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
